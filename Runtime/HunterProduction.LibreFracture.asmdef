@@ -1,0 +1,18 @@
+{
+    "name": "HunterProduction.LibreFracture",
+    "rootNamespace": "LibreFracture",
+    "references": [
+        "GUID:6a697808d7c80a549b57420070d6c4f3",
+        "GUID:5d4d87e2dc2c7d8439d5cd8c55d43b81",
+        "GUID:21b0c8d1703a94250bfac916590cea4f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

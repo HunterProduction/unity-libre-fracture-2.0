@@ -1,0 +1,30 @@
+{
+  "name": "com.hunter-production.new-libre-fracture",
+  "displayName": "Libre Fracture 2.0",
+  "version": "0.0.1",
+  "unity": "2022.3",
+  "unityRelease": "25f1",
+  "description": "A template Unity package folder to use as a basis to build a new package.",
+  "category": "Tool",
+  "type": "tool",
+  "author": {
+    "name": "Mattia Cacciatore",
+    "email": "mattiacacciatore.mc@gmaill.com"
+  },
+  "dependencies": {
+    "com.unity.ext.nunit": "1.0.0"
+  },
+  "keywords": [
+    "HunterProduction",
+    "Physics",
+    "Destruction",
+    "Fracture"
+  ],
+  "samples": [
+    {
+      "displayName": "Libre Fracture Sample",
+      "description": "Sample scene for demonstration purposes.\n<i>Dependencies:</i>\n• <a href=\"https://docs.unity3d.com/Packages/com.unity.probuilder@6.0/manual/installing.html\">ProBuilder</a>",
+      "path": "Samples~/LibreFractureSample"
+    }
+  ]
+}
