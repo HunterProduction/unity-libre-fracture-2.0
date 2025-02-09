@@ -9,6 +9,11 @@
 
 ![librefracture2-editor-tool](https://github.com/HunterProduction/unity-libre-fracture-2.0/wiki/librefracture2-editor-tool.gif)
 
+### Graph-based Runtime Chunk Management
+
+![librefracture2-graph](https://github.com/HunterProduction/unity-libre-fracture-2.0/wiki/librefracture2-graph.gif)
+
+
 ## Install package
 
 Please note that this method does not support dependency resolution and package upgrading when a new version is released. So it's a good practice to manually check for updates in the Package Manager.
