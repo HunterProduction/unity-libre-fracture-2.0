@@ -1,15 +1,13 @@
 # Libre Fracture 2.0
+![librefracture2-dragon-fall](https://github.com/HunterProduction/unity-libre-fracture-2.0/wiki/librefracture2-dragon-fall.gif)
+
 *Describe package here*
 
 ## Features
 
 ### Editor Tool
 
-![librefracture2_0-editor-tool](https://github.com/HunterProduction/unity-libre-fracture-2.0/wiki/librefracture2_0-editor-tool.gif)
-
-### External Packages
-
-### Internal Packages
+![librefracture2-editor-tool](https://github.com/HunterProduction/unity-libre-fracture-2.0/wiki/librefracture2-editor-tool.gif)
 
 ## Install package
 
