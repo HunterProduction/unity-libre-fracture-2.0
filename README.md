@@ -9,20 +9,26 @@ After a lot of refactoring, code cleanup and polishing, I decided to share the t
 
 *- Mattia*
 
+## Install package
+
+Please note that this method does not support dependency resolution and package upgrading when a new version is released. So it's a good practice to manually check for updates in the Package Manager.
+
 ## Features
 
 ### Editor Tool
+It is possible to create a fractured tween of a GameObject thanks to the dedicated Editor tool, located under the menu `Tools/Libre Fracture 2.0`. 
 
 ![librefracture2-editor-tool](https://github.com/HunterProduction/unity-libre-fracture-2.0/wiki/librefracture2-editor-tool.gif)
+
+- Visual preview of the fractured GameObject, with customizable chunks distance
+- Customizable material for the mesh interior
+- Different fracture approaches
+- Possibility to create the fractured instance in the scene, or to save it as a Prefab to be stored in the project
 
 ### Graph-based Runtime Chunk Management
 
 ![librefracture2-graph](https://github.com/HunterProduction/unity-libre-fracture-2.0/wiki/librefracture2-graph.gif)
 
-
-## Install package
-
-Please note that this method does not support dependency resolution and package upgrading when a new version is released. So it's a good practice to manually check for updates in the Package Manager.
 
 ## Credits
 Mattia Cacciatore - [mattiacacciatore.mc@gmail.com](mattiacacciatore.mc@gmail.com)
