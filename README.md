@@ -5,7 +5,7 @@ Hello dear readers! Welcome to **Libre Fracture 2.0**, a tool for **object destr
 
 As I was browsing the Internet in search of some open source Unity projects concerning this topic, I came across two repos, [Unity Fracture](https://github.com/ElasticSea/unity-fracture) and [Libre Fracture](https://github.com/U3DC/unity-libre-fracture). Both had some interesting implementations ideas, but were a bit outdated and poorly maintained. So I tried to put together what I think were the best aspects of the two.
 
-After a lot of refactoring, code cleanup and polishing, I decided to share the tool with the community. I don't know how much time and effort I will be able to spend to this project in the future, but feel free to give > feedback and let me know if you find it interesting and useful!
+After a lot of refactoring, code cleanup and polishing, I decided to share the tool with the community. I don't know how much time and effort I will be able to spend to this project in the future, but feel free to give feedback and let me know if you find it interesting and useful!
 
 *- Mattia*
 
@@ -33,8 +33,22 @@ With Libre Fracture 2.0 you can create a **fractured tween** of a GameObject tha
 
 ### Graph-based Runtime Chunk Management
 
+The runtime simulation is modeled as a graph where each `ChunkNode` is connected with the nearby ones throw a `FixedJoint`. 
+Each `ChunkNode` controls its status in the graph independently. Possible chunk states are:
+- **Connected** (Blue gizmo): Chunk is totally connected with all of its original neighbours
+- **Broken** (Pink gizmo): At least one of the connections with the neighbour chunks has been broken
+- **Detached** (Red gizmo): All of the connections with the neighbour chunks are broken. Chunk is totally detached from the object structure.
+- **Anchored**[^1] (Yellow gizmo): Chunk is fixed, anchored to its default place. 
+
 ![librefracture2-graph](https://github.com/HunterProduction/unity-libre-fracture-2.0/wiki/librefracture2-graph.gif)
 
+The `ChunkGraphManager` component is only responsible of setting up and initialize the whole chunks graph, avoiding frequent loops across the chunks collection.
+Some of its main parameters are:
+- `anchored`: If true, chunks bordering other colliders nearby in the scene (e.g. the floor, a wall) are set to Anchored. This may be useful to achieve a result where the object is not totally free to move, and part of it has to remain attached to the environment nearby (e.g. a breakable wall/floor/surface)
+- `freezeConnectedChunks`: If true, each chunk's rigidbody has its constraints set to frozen when still connected to the graph. This may reduce the "wobbling" of the fragmented object's structure, but may not preserve the accuracy of the collision's reaction.
+- `startAsleep`: If true, the component at start disables all its chunks and enables the root mesh renderer and collider. When a first collision with the root collider happens, the chunks structure is re-enabled.
+
+[^1]: A chunk may enter this state on startup only if `ChunkGraphManager`'s `anchored` toggle is enabled.
 
 ## Credits
 Mattia Cacciatore - [mattiacacciatore.mc@gmail.com](mattiacacciatore.mc@gmail.com)
