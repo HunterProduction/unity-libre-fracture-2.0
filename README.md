@@ -1,7 +1,7 @@
-# Libre Fracture 2.0
+# Libre Fracture 2.0💥
 ![librefracture2-dragon-fall](https://github.com/HunterProduction/unity-libre-fracture-2.0/wiki/librefracture2-dragon-fall.gif)
 
-Hello dear readers! Welcome to **Libre Fracture 2.0**, a tool for **object destruction in Unity**.
+Hello dear readers! Welcome to **Libre Fracture 2.0**💥, a tool for **object destruction in Unity**.
 
 As I was browsing the Internet in search of some open source Unity projects concerning this topic, I came across two repos, [Unity Fracture](https://github.com/ElasticSea/unity-fracture) and [Libre Fracture](https://github.com/U3DC/unity-libre-fracture). Both had some interesting implementations ideas, but were a bit outdated and poorly maintained. So I tried to put together what I think were the best aspects of the two.
 
@@ -33,7 +33,7 @@ With Libre Fracture 2.0 you can create a **fractured tween** of a GameObject tha
 - Different fracture approaches
 - Possibility to create the fractured instance in the scene, or to save it as a Prefab to be stored in the project
 
-### Graph-based Runtime Chunk Management
+### Graph-based Runtime Chunks Management
 
 The runtime simulation is modeled as a **graph** where each `ChunkNode` is connected with the nearby ones through a `FixedJoint`. 
 Each `ChunkNode` controls its status in the graph independently. Possible chunk states are:
