@@ -264,17 +264,18 @@ namespace LibreFracture
             var connectionsCount = connections.Count;
             if (connectionsCount == 0)
                 return;
-            var points = new Vector3[2* connectionsCount];
+            var points = new Vector3[2 * connectionsCount];
             int i = 0;
+            Gizmos.color = Color.blue;
             foreach(var connectedNode in connections.Keys)
             {
                 var otherCenterOfMass = connectedNode.Rigidbody.worldCenterOfMass;
                 points[i++] = centerOfMass;
                 points[i++] = otherCenterOfMass;
-            }
 
-            Gizmos.color = Color.blue;
-            Gizmos.DrawLineList(points);
+                //Draw gizmo line for connections
+                Gizmos.DrawLine(points[i], points[i++]);
+            }
         }
 
         #endregion

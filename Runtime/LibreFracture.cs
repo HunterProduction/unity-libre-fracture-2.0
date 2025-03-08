@@ -1,5 +1,4 @@
 using UnityEngine;
-using Unity.VisualScripting;
 using NvBlast;
 
 
@@ -162,7 +161,7 @@ namespace LibreFracture
                     chunkDistancePreview.UpdatePreview(0);
                     GameObject.DestroyImmediate(chunkDistancePreview);
                 }
-                chunk.GetOrAddComponent<ChunkNode>();
+                chunk.gameObject.AddComponent<ChunkNode>();
 
                 CreateColliderForChunk(chunk.gameObject);
             }
@@ -173,7 +172,8 @@ namespace LibreFracture
             if(!fracturedObject.TryGetComponent<Collider>(out _))
                 fracturedObject.AddComponent<MeshCollider>();
 
-            var fracture = fracturedObject.GetOrAddComponent<ChunkGraphManager>();
+            var fracture = fracturedObject.GetComponent<ChunkGraphManager>();
+            if (fracture == null) fracture = fracturedObject.AddComponent<ChunkGraphManager>();
             fracture.jointBreakForce = parameters.jointBreakForce;
             fracture.totalMass = parameters.totalObjectMass;
 
